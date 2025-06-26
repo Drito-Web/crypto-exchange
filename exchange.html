@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>CryptoExchange</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/exchange.css">
 </head>
 
 <body>
@@ -17,9 +18,52 @@
     </div>
   </header>
 
-  <main id="exchange-container">
-    <!-- Balance y formularios se llenan desde JS -->
-  </main>
+  <section class="exchange-panel">
+  <h2>Simulador de Compra/Venta</h2>
+  
+  <form id="trade-form">
+    <label for="action">Acción:</label>
+    <select id="action">
+      <option value="buy">Comprar</option>
+      <option value="sell">Vender</option>
+    </select>
+
+    <label for="coin">Moneda:</label>
+    <select id="coin">
+      <option value="BTC">BTC</option>
+      <option value="ETH">ETH</option>
+    </select>
+
+    <label for="amount">Cantidad (USD):</label>
+    <input type="number" id="amount" required min="1">
+
+    <button type="submit">Ejecutar operación</button>
+  </form>
+
+  <h3>Balance simulado</h3>
+  <ul id="balances">
+    <li>USD: $<span id="usd">10000</span></li>
+    <li>BTC: <span id="btc">0.00</span></li>
+    <li>ETH: <span id="eth">0.00</span></li>
+  </ul>
+
+  <h3>Historial de operaciones</h3>
+  <table id="history">
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Moneda</th>
+        <th>Cantidad (USD)</th>
+        <th>Precio</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Aquí van las operaciones -->
+    </tbody>
+  </table>
+</section>
+
 
 <script>
     const user = JSON.parse(localStorage.getItem("user"));
