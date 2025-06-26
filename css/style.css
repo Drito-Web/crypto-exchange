@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  line-height: 1.6;
+}
+
+header {
+  background: #121212;
+  padding: 1rem 0;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.nav a {
+  color: #ccc;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #052669, #5483d3);
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero button {
+  background: #c1e8ff;
+  color: #021024;
+  padding: 0.75rem 2rem;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.market {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.market table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.market th, .market td {
+  border: 1px solid #333;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.up {
+  color: #4caf50;
+}
+
+.down {
+  color: #f44336;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #121212;
+  margin-top: 2rem;
+}

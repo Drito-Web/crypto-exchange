@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CryptoExchange</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+    <div class="container nav">
+      <h1>CryptoExchange</h1>
+      <nav>
+          <p>Bienvenido, <span id="user-name"></span>
+          <button onclick="logout()">Cerrar sesión</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="exchange-container">
+    <!-- Balance y formularios se llenan desde JS -->
+  </main>
+
+<script>
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (!user) {
+      window.location.href = "login.html";
+    } else {
+      document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("user-name").textContent = user.name;
+      });
+    }
+    function logout() {
+      localStorage.removeItem("user");
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+
+</html>
