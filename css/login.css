@@ -1,7 +1,9 @@
 body {
   font-family: Arial, sans-serif;
   background: #0f0f0f;
-  color: white;
+  color: #fff;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +13,16 @@ body {
 .login-container {
   background: #052669;
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
+  width: 90%;
+  max-width: 400px;
 }
 
+.login-container h1 {
+  margin-bottom: 0.5rem;
+}
+
+.login-container p {
+  margin-bottom: 1.5rem;
+}
