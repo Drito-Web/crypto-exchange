@@ -1,12 +1,11 @@
-function handleCredentialResponse(response) {
+export function handleGoogleLogin(response) {
   const data = parseJwt(response.credential);
   console.log("Usuario autenticado:", data);
 
   localStorage.setItem("user", JSON.stringify(data));
   window.location.href = "exchange.html"; // Redirige al Exchange
 }
-
-function parseJwt(token) {
+export function parseJwt(token) {
   const base64Url = token.split('.')[1];
   const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
   const jsonPayload = decodeURIComponent(
