@@ -34,6 +34,9 @@ export function initUserUI(user) {
         </thead>
         <tbody></tbody>
       </table>
+  
+    <h3>Gráfico de BTC/ETH</h3>
+    <canvas id="chart" width="600" height="300"></canvas>
     </section>
   `;
 
